@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="rssReader" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="rssReader" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="rssReader" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="rssReader" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AngularJS rss reader</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css">
+  <link rel="stylesheet" href="app.css">
+
+  <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+<header-directive></header-directive>
+
+<ng-view></ng-view>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- LIBS -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap-css/js/bootstrap.min.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-toastr/dist/angular-toastr.js"></script>
+
+  <script src="bower_components/moment/moment.js"></script>
+  <script src="bower_components/angular-moment/angular-moment.js"></script>
+
+  <!-- APPLICATION LIBS -->
+  <script src="app.js"></script>
+  <script src="views/home/home.js"></script>
+
+  <!-- COMPONENTS -->
+  <script src="components/header/header.js"></script>
+  <script src="components/header/headerDirective.js"></script>
+
+  <script src="components/rssPlace/rssPlace.js"></script>
+  <script src="components/rssPlace/rssPlaceController.js"></script>
+  <script src="components/rssPlace/rssPlaceDirective.js"></script>
+  <script src="components/rssPlace/rssPlaceFilters.js"></script>
+
+  <script src="components/rssPlace/leftMenu/leftMenuDirective.js"></script>
+
+  <script src="components/rssPlace/centralPanel/centralPanelDirective.js"></script>
+
+  <script src="components/rssPlace/subscribeModal/subscribeModalController.js"></script>
+
+  <script src="components/rssPlace/addNewGroupModal/addNewGroupController.js"></script>
+
+  <!-- SERVICES -->
+  <script src="services/rssService.js"></script>
+</body>
+</html>

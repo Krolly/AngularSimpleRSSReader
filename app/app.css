@@ -1,0 +1,100 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.loadFeedsButton {
+    margin-bottom: 20px;
+}
+
+.button-bar-vertical {
+    width: 100%;
+}
+
+.left-menu-button {
+    text-align: left;
+    width: 85%;
+}
+
+.central-panel {
+    padding-top: 30px;
+}
+
+.close-button {
+    text-align: center;
+}
+
+.left-menu-item {
+    padding-bottom: 5px;
+}
+
+.pagination {
+    margin: auto;
+}
+
+.paginationWrapper {
+    text-align: center;
+}
+
+.fullNews {
+    padding-top: 55px;
+}
+
+.sortItebsByTimeButton {
+    margin-left: 30px;
+}
+
+.newsFilterInput {
+    width: 500px;
+    display: inline;
+}
+
+.central-panel-content {
+    max-width: 1000px;
+}
+
+.selected-feed {
+    background-color: #ADADAD !important;
+}
+
+.left-menu-item-animated.ng-enter,
+.left-menu-item-animated.ng-leave {
+    -webkit-transition:all linear 0.5s;
+    transition:all linear 0.5s;
+}
+
+.left-menu-item-animated.ng-leave.ng-leave-active,
+.left-menu-item-animated.ng-enter {
+    opacity:0;
+}
+
+.left-menu-item-animated.ng-leave,
+.left-menu-item-animated.ng-enter.ng-enter-active {
+    opacity:1;
+}

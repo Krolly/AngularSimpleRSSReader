@@ -1,0 +1,21 @@
+<div class="leftMenu">
+    <button class="btn btn-primary loadFeedsButton" ng-click="openSubscribeModal()">+ Add Feed</button>
+    <button class="btn btn-primary loadFeedsButton" ng-click="openAddNewGroupModal()">Add Group</button>
+    <button class="btn btn-primary loadFeedsButton" ng-click="sortGroupsByName()">Sort Groups</button>
+
+    <accordion>
+        <accordion-group id="group-{{feedGroup.id}}" heading="{{feedGroup.title}}" ng-repeat="feedGroup in feedGroups.groups" class="left-menu-item-animated">
+            <div class="btn-group-vertical button-bar-vertical" role="group" aria-label="{{feedGroup.title}}">
+                <div ng-repeat="feed in feedGroup.feeds" class="left-menu-item left-menu-item-animated">
+                    <button type="button"
+                            data-value="{{feed.link}}"
+                            class="btn btn-default left-menu-button"
+                            ng-click="loadRssByUrl($event, feed.link)"
+                            >{{feed.title}}</button>
+                    <button class="btn btn-default close-button"
+                            ng-click="removeFeed(feedGroup.id, feed.id)">x</button>
+                </div>
+            </div>
+        </accordion-group>
+    </accordion>
+</div>

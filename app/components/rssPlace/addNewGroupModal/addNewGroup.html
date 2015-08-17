@@ -1,0 +1,19 @@
+<div>
+    <div class="modal-header">
+        <h3 class="modal-title">Add new group</h3>
+    </div>
+    <form name="addGroupForm">
+        <div class="modal-body">
+            <fieldset>
+                <div class="form-group">
+                    <label for="group-name">Group name</label>
+                    <input type="text" required class="form-control" id="group-name" ng-model="addNewGroupModel.newGroupName" placeholder="Enter new group name"/>
+                </div>
+            </fieldset>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" ng-disabled="addGroupForm.$invalid" class="btn btn-primary" ng-click="addNewGroup(addGroupForm)">Save</button>
+            <button type="reset" class="btn btn-warning" ng-click="cancelAddNewGroup()">Cancel</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,29 @@
+<div>
+    <div class="modal-header">
+        <h3 class="modal-title">Add new feed</h3>
+    </div>
+    <form name="rssFeedForm">
+        <div class="modal-body">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="new-rss-group">Feed group</label>
+                        <select class="form-control" id="new-rss-group" ng-model="subscribeModel.newFeedGroupID" required>
+                            <option ng-repeat="feedGroup in feedGroups.groups" value="{{feedGroup.id}}">{{feedGroup.title}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="rss-feed-name">Feed title</label>
+                        <input type="text" required class="form-control" id="rss-feed-name" ng-model="subscribeModel.newFeedTitle" placeholder="Enter feed title"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="rss-link">Feed link</label>
+                        <input type="url" required class="form-control" id="rss-link" ng-model="subscribeModel.newFeedPath" placeholder="Enter link"/>
+                    </div>
+                </fieldset>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" ng-disabled="rssFeedForm.$invalid" class="btn btn-primary" ng-click="rssAddSubscribe(rssFeedForm)">Save</button>
+            <button type="reset" class="btn btn-warning" ng-click="rssCancelSubscribe()">Cancel</button>
+        </div>
+    </form>
+</div>

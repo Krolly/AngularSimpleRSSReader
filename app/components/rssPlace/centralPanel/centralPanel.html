@@ -1,0 +1,36 @@
+<div class="central-panel-content">
+    <div class="newsList" ng-hide="fullNewShowed || parsedFeeds.length === null || parsedFeeds.length == 0">
+        <button class="btn btn-primary sortItebsByTimeButton"
+                ng-show="parsedFeeds.length > 0"
+                ng-click="sortNewsByTime()">Sort By Time {{getSortInputArrow(sortByTimeReverse)}}</button>
+
+        <input type="text" class="form-control newsFilterInput"
+               ng-show="parsedFeeds.length > 0"
+               ng-change="updateTotalItems()"
+               ng-model="searchWord" placeholder="Search for...">
+
+        <div class="row-fluid central-panel">
+            <ul class="unstyled">
+                <li  ng-repeat="parsedFeed in parsedFeeds | filterNewsByName:searchWord | parseDateToUnix | orderBy:sortByTimePredicate:sortByTimeReverse | paginationFilter:currentPage:itemsPerPage | filter:filterText">
+                    <h5><a href="#" onclick="return false;" ng-click="openFullNews(parsedFeed)" data-value="{{parsedFeed.link}}">{{parsedFeed.title}}</a></h5>
+                    <p class="text-left">{{parsedFeed.contentSnippet}}</p>
+                    <span class="small">{{formatCreationDate(parsedFeed.publishedDate)}}</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="paginationWrapper">
+            <pagination total-items="totalItems"
+                        items-per-page="itemsPerPage"
+                        class="pagination"
+                        name="paginationBar"
+                        ng-model="currentPage"
+                        ng-show="totalItems > 0">
+            </pagination>
+        </div>
+
+    </div>
+
+    <div class="fullNews" id="fullNews" ng-show="fullNewShowed">
+    </div>
+</div>

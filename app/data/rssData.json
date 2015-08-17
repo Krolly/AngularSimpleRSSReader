@@ -1,0 +1,57 @@
+{
+  "userId":"rssData",
+  "groups" :   [
+    {
+      "title" : "TUT.BY",
+      "id" : "1429803408",
+      "feeds" : [
+        {
+          "id" : "feed-1430738542586",
+          "title" : "Главные новости недели",
+          "link" : "http://news.tut.by/rss/index.rss"
+        },
+        {
+          "id" : "feed-1430738542581",
+          "title" : "Экономика и бизнес",
+          "link" : "http://news.tut.by/rss/economics.rss"
+        },
+        {
+          "id" : "feed-1430738542582",
+          "title" : "Спорт",
+          "link" : "http://news.tut.by/rss/sport.rss"
+        }
+      ]
+    },
+    {
+      "title" : "Different",
+      "id" : "1429803424",
+      "feeds" : [
+        {
+          "id" : "feed-1430738542583",
+          "title" : "Habrahabr",
+          "link" : "http://habrahabr.ru/rss/interesting/"
+        },
+        {
+          "id" : "feed-1430738542584",
+          "title" : "World news",
+          "link" : "http://news.tut.by/rss/world.rss"
+        },
+        {
+          "id" : "feed-1437134542584",
+          "title" : "Championat.com",
+          "link" : "http://www.championat.com/xml/rss-article.xml"
+        },
+        {
+          "id" : "feed-1137134542581",
+          "title" : "Sports.ru",
+          "link" : "http://www.sports.ru/rss/all_news.xml"
+        },
+        {
+          "id" : "feed-1137131542581",
+          "title" : "Football",
+          "link" : "http://www.sports.ru/rss/rubric.xml?s=208"
+        }
+      ]
+    }
+  ]
+}
